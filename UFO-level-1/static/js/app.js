@@ -25,10 +25,14 @@ data.forEach(function(i) {
 // Use a date form in the HTML document and write JavaScript code that will 
 // listen for events and search through the `date/time` column to find rows that match user input.
 
+// Select the button
+var button = d3.select("#filter-btn");
+
 // Select the form
 var form = d3.select("#form");
 
-// Create an event handler
+// Create event handlers
+button.on("click", runEnter);
 form.on("submit", runEnter);
 
 // Complete the event handler function for the form
